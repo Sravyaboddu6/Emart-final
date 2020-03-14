@@ -1,0 +1,54 @@
+<style>
+    .design{
+     
+        background-image: url(https://images.unsplash.com/photo-1507608158173-1dcec673a2e5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    footer {
+
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+background-image: url(https://images.unsplash.com/photo-1507608158173-1dcec673a2e5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);
+color: rgb(192, 17, 17);
+text-align: center;
+text-decoration: dashed;
+background-repeat: repeat;
+}
+</style>
+<nav class="navbar navbar-expand-md design">
+    <h2 class="text-white">
+        <i class="material-icons">storefront</i>eMart</h2>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#collapse-nav-bar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapse-nav-bar">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item" *ngIf="!getLoggedIn()">
+                <a class="nav-link text-white" routerLink="first"><i class="material-icons">home</i>HOME</a>
+            </li>
+            <li class="nav-item" *ngIf="!getLoggedIn()">
+                <a class="nav-link text-white" routerLink="/">Login</a>
+            </li>
+            <li class="nav-item" *ngIf="getLoggedIn()">
+                <a class="nav-link  text-white" routerLink="item-list">Item List</a>
+            </li>
+            <li class="nav-item" *ngIf="getLoggedIn()">
+
+                <a class="nav-link text-white" routerLink="cart-list">Cart</a>
+            </li>
+            <li class="nav-item" *ngIf="getLoggedIn()">
+                <a class="nav-link text-white" routerLink="bill-list">Purchase History</a>
+            </li>
+            <li class="nav-item" *ngIf="getLoggedIn()">
+                <a class="nav-link text-white" routerLink="logout">Logout</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<footer class="sticky-footer fixed-bottom">
+    2020 @Copyright
+</footer>
+
